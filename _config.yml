@@ -8,10 +8,8 @@ tagline: 安静写字的地方
 description: >-
   个人技术笔记与生活随笔，用最简单的工具记录思考。
 
-url: ""                    # GitHub Pages 会自动设置
-baseurl: "/myblog"         # 仓库名（如果仓库名就是 myblog）
-                           # 如果仓库是 username.github.io，请把这一行删掉
-                           # 或改为 baseurl: ""
+url: "https://5kl6.github.io"
+baseurl: "/myblog"
 
 author: 博主
 lang: zh-CN
