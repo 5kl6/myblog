@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>你好，世界——我的零成本静态博客 — 我的博客</title>
+  <meta name="description" content="用 Jekyll + GitHub Pages 搭建一个完全免费的静态博客，以及为什么你不需要数据库、服务器和域名也能开始写字。">
+  <link rel="stylesheet" href="/myblog/assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="site-title" href="/myblog/">我的博客</a>
+      <nav class="site-nav">
+        <a href="/myblog/">首页</a>
+        <a href="/myblog/about/">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="wrapper">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">你好，世界——我的零成本静态博客</h1>
+          <time class="post-date" datetime="2026-06-08">2026 年 06 月 08 日</time>
+        </header>
+
+        <div class="post-content">
+          <p>这大概是我第 N 次搭建博客了。WordPress、Hugo、Hexo、Notion + 中转服务……每一种都踩过一遍。这次不一样——目标很明确：<strong>零成本、零维护、纯静态</strong>。</p>
+
+          <h2>为什么选这个方案</h2>
+          <ul>
+            <li><strong>GitHub Pages 原生支持</strong>：push 即发布，不需要配 CI。</li>
+            <li><strong>Markdown 写作</strong>：不绑后台编辑器，任何地方都能写。</li>
+            <li><strong>完全免费</strong>：没有域名费用、没有托管费、没有数据库。</li>
+          </ul>
+
+          <h2>目录结构一览</h2>
+          <pre><code>myblog/
+├── index.html           # 首页
+├── .nojekyll            # 告诉 GitHub 不运行 Jekyll
+├── assets/
+│   └── css/
+│       └── style.scss   # 样式表
+├── posts/
+│   └── hello-world.html # 示例文章
+└── README.md            # 说明文档
+</code></pre>
+
+          <h2>一点 CSS 代码</h2>
+          <p>行内代码是这么写的：</p>
+          <pre><code>.post-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}</code></pre>
+
+          <p>而一段 Python 长这样：</p>
+          <pre><code>def greet(name):
+    return f"你好，{name}！欢迎来到我的博客。"
+
+if __name__ == "__main__":
+    print(greet("世界"))</code></pre>
+
+          <h2>写作工具链</h2>
+          <table>
+            <thead>
+              <tr><th>环节</th><th>工具</th><th>说明</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>写作</td><td>VS Code / Typora</td><td>Markdown 即时预览</td></tr>
+              <tr><td>图片</td><td>本地截图</td><td>放到仓库 images/ 目录</td></tr>
+              <tr><td>发布</td><td>git push</td><td>或 GitHub 网页直接上传</td></tr>
+            </tbody>
+          </table>
+
+          <blockquote>
+            <p><strong>一个提醒</strong>：图片文件不要太大。每张控制在 200KB 以内，阅读体验会好很多。</p>
+          </blockquote>
+
+          <h2>下一步</h2>
+          <ol>
+            <li>修改 <code>index.html</code> 里的站点名和作者名。</li>
+            <li>在 <code>posts/</code> 目录下新建 HTML 文件。</li>
+            <li>Push 到 GitHub，刷新页面——新文章就在线了。</li>
+          </ol>
+
+          <p>没有数据库备份、没有服务器宕机、没有 SSL 证书过期。这些东西 GitHub 都替你做了。</p>
+
+          <p>写过这么多博客工具之后，我越来越相信一个道理：<strong>工具越轻，写得越多。</strong> 你不需要一个花哨的 CMS 来开始——一段文字、一个文件、一次 git push，就够了。</p>
+
+          <hr>
+
+          <p><em>如果你也在找零成本的写作方案，不妨试试这套——它已经在这里等着你了。</em></p>
+        </div>
+
+        <footer class="post-footer">
+          <p><a href="/myblog/">← 返回首页</a></p>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>
+        &copy; 2026 博主 &nbsp;·&nbsp;
+        托管于 <a href="https://pages.github.com">GitHub Pages</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
