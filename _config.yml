@@ -1,12 +1,7 @@
-# ============================================================
-# myblog — Jekyll 配置文件
-# 托管于 GitHub Pages，零成本、零依赖付费服务
-# ============================================================
-
+# myblog — Jekyll 配置
 title: 我的博客
 tagline: 安静写字的地方
-description: >-
-  个人技术笔记与生活随笔，用最简单的工具记录思考。
+description: 个人技术笔记与生活随笔，用最简单的工具记录思考。
 
 url: "https://5kl6.github.io"
 baseurl: "/myblog"
@@ -15,28 +10,12 @@ author: 博主
 lang: zh-CN
 timezone: Asia/Shanghai
 
-# Markdown 渲染
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  hard_wrap: false
-
-# 文章永久链接
 permalink: /:year/:month/:day/:title/
 
-# 默认 Front Matter
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: post
-
-# 排除不需要处理的文件和目录
-exclude:
-  - README.md
-  - LICENSE
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
